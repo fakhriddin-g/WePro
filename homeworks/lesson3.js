@@ -41,8 +41,12 @@ let arr = [
   },
 ]
 
+
+
 let overEightTeen = arr.filter(item => item.age >= 18)
+overEightTeen.sort((a, b) => a.age - b.age);
 console.log(overEightTeen);
 
 let underEightTeen = arr.filter(item => item.age < 18)
+underEightTeen.sort((a, b) => a.age - b.age);
 console.log(underEightTeen);
