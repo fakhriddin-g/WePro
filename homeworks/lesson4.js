@@ -46,7 +46,20 @@ let keysValues = newTypeKeys.concat(newTypeValues)
 
 console.log(keysValues);
 
+let type = {
+  string: 0,
+  number: 0,
+  object: 0,
+  boolean: 0
+}
 
+
+keysValues.filter(i => {
+  if(typeof[i] === 'number') {
+    console.log(true);
+  }
+})
+console.log(number);
 
 
 
