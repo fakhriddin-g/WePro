@@ -56,10 +56,10 @@ let type = {
 
 keysValues.filter(i => {
   if(typeof[i] === 'number') {
-    console.log(true);
+    type.string++
   }
 })
-console.log(number);
+console.log(string);
 
 
 
