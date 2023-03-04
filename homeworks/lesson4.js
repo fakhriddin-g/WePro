@@ -48,18 +48,17 @@ console.log(keysValues);
 
 let type = {
   string: 0,
-  number: 0,
+  number: [],
   object: 0,
   boolean: 0
 }
 
-
 keysValues.filter(i => {
-  if(typeof[i] === 'number') {
-    type.number++
+  if(typeof(i) === 'number') {
+    type.number.push(i)
   }
 })
-console.log(number);
+console.log(type);
 
 
 
