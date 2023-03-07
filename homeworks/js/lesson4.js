@@ -47,21 +47,20 @@ let keysValues = newTypeKeys.concat(newTypeValues)
 console.log(keysValues);
 
 let type = {
-  string: 0,
+  string: [],
   number: [],
-  object: 0,
-  boolean: 0
+  object: [],
+  boolean: []
 }
 
-keysValues.filter(i => {
-  if(typeof(i) === 'number') {
-    type.number.push(i)
+keysValues.forEach(i => {
+  let key = typeof(i)
+
+  if(typeof(key)) {
+    type[key].push(i)
   }
 })
 console.log(type);
-
-
-
 
 // Соеденить два объекта в одно целое (новый объект)
 // Получить все ключи из нового объекта и сохранить их в новую переменную
