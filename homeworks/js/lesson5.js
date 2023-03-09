@@ -76,10 +76,10 @@ let b = {
 }
 
 arr.forEach(item => {
-  [item.completed, item.userId, item.title]
+  // [item.completed, item.userId, item.title]
 
   if(item.completed === true) {
-    a.arr.push(item.title)
+    a.arr.push(item.title)  
     a.count++
   } else{
     b.arr.push(item.title)
