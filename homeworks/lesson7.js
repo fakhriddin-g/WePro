@@ -109,20 +109,33 @@ let arr = [
 ];
 
 
-for (let i = 0; i < arr.length; i++) {
-  let expensesPerMonths = 0
-  const element = arr[i]
+// for (let i = 0; i < arr.length; i++) {
+//   let expensesPerMonths = 0
+//   const element = arr[i]
 
-  for (let j = 0; j < element.expensesPerYear.length; j++) {
-    const expensesPerYearElement = element.expensesPerYear[j]
+//   for (let j = 0; j < element.expensesPerYear.length; j++) {
+//     const expensesPerYearElement = element.expensesPerYear[j]
     
-    expensesPerMonths += expensesPerYearElement.total
-    // console.log(expensesPerYearElement);
+//     expensesPerMonths += expensesPerYearElement.total
+//   }
+
+//   element.expensesPerMonths = Math.round(expensesPerMonths / 12)
+//   element.monthlyBudjet = Math.round(element.budget / 12)
+//   element.netProfit = element.budget - element.monthlyBudjet
+//   console.log(element);
+// }
+
+
+for (let i of arr) {
+  let expensesPerMonths = 0
+
+  for (let j of i.expensesPerYear) {
+    expensesPerMonths += j.total
   }
 
-  element.expensesPerMonths = Math.round(expensesPerMonths / 12)
-  // console.log(element.expensesPerMonths);
-  element.monthlyBudjet = Math.round(element.budget / 12)
-  element.netProfit = element.budget - element.monthlyBudjet
-  console.log(element);
+  i.expensesPerMonths = Math.round(expensesPerMonths / 12)
+  i.monthlyBudjet = Math.round(i.budget / 12)
+  i.netProfit = i.monthlyBudjet - i.expensesPerMonths
+  console.log(i);
+  
 }
