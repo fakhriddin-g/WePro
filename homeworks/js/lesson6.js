@@ -75,8 +75,9 @@ let salesProducts = []
 
 for (let item of products) {
   let discount = 20
-  item.price -= (item.price * discount / 100)
+  let newItem = Object.assign({}, item)
+  newItem.price -= (newItem.price * discount / 100)
   
-  salesProducts.push(item)
+  salesProducts.push(newItem)
 }
 console.log(salesProducts);
