@@ -16,7 +16,7 @@ let ln = ""
 
 for (let item of names) {
   console.log(item.length);
-  if(item.length === 10) {
+  if(ln === item.length) {
     console.log(item);
   }
 }
