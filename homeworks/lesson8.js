@@ -138,16 +138,26 @@ let categories = [
 // }
 
 
+// for (const item of arr) {
+//   let newItem = item.info.faculity.toUpperCase()
+//   // console.log(newItem);
+//   for (const category of categories) {
+//     let newCategory = category.course.trim()
+//     if(newItem === newCategory) {
+//       console.log(item);
+//     }
+//   }
+// }
 
 
-
-for (const item of arr) {
+for(let item of arr) {
   let newItem = item.info.faculity.toUpperCase()
-  // console.log(newItem);
-  for (const category of categories) {
+  for(let category of categories) {
     let newCategory = category.course.trim()
     if(newItem === newCategory) {
-      console.log(item);
+      category.count++
     }
   }
 }
+
+console.log(categories);
